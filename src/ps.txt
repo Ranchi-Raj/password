@@ -1,0 +1,14 @@
+Here is a small project for you all:
+Make a password generator website using React with following features:
+
+• User can choose the length of password (8 to 32)
+• Password should contain both Uppercase and lowercase characters
+• User should have the right to include/exclude numbers and special characters in the password.
+• Add a button to copy the password in clipboard.
+•The website must not reload by any of the above changes.(You all might be knowing how REACT works)
+
+Use the following hooks:
+useState, useEffect, use Ref, etc.
+
+Deadline: 24th March, 2024 (11:59pm)
+Host your websites on github and send the link in the group.
