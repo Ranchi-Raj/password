@@ -5,8 +5,8 @@ import Display from './Display';
 export default function Generator() {
 
     const [checkedItems, setCheckedItems] = React.useState({
-        checkbox1: true,
-        checkbox3: true
+        checkbox1: false,
+        checkbox3: false
       });
 
       const [text, setText] = React.useState();
@@ -134,6 +134,11 @@ export default function Generator() {
         name =""; 
 
        // alert(`Number ${checkedItems.checkbox1} Special ${checkedItems.checkbox3}`)
+
+       toast('Generated !', {
+        icon: '👏', position:"bottom-center",duration:700
+      });
+      
       }
     
         const handleCopyClick = () => {
@@ -157,6 +162,7 @@ export default function Generator() {
         <div className='flex text-center pt-12 justify-center'>
         <label className='mx-10'>
             <input
+            className='rounded-md h-6 w-6 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"'
             type="checkbox"
             name="checkbox1"
             checked={checkedItems.checkbox1}
@@ -182,6 +188,7 @@ export default function Generator() {
         {/* <br /> */}
         <label className='mx-10'>
             <input
+            className='rounded-xl h-6 w-6 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"'
             type="checkbox"
             name="checkbox3"
             checked={checkedItems.checkbox3}
