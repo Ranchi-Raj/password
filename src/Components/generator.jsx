@@ -1,4 +1,5 @@
 import React from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 import Display from './Display';
 
 export default function Generator() {
@@ -31,7 +32,8 @@ export default function Generator() {
 
         if(len<8 || len>32)
         {
-            alert("Length should be between 8 and 32 !!")
+           toast.error("Length should be between 8 and 32");
+           <Toaster/>
             return
         }
 
@@ -137,7 +139,7 @@ export default function Generator() {
         const handleCopyClick = () => {
             navigator.clipboard.writeText(datas)
 
-            alert("Copied Successfully !!!!")
+            toast.success("Successfully Copied")
     };
       
     
@@ -150,6 +152,7 @@ export default function Generator() {
             </div>
             <button className=' bg-blue-400 rounded-lg px-6 mt-2
              hover:bg-blue-700 ease-in duration-300 h-12'onClick={handleCopyClick} >Copy</button>
+             <Toaster/>
         </div>
         <div className='flex text-center pt-12 justify-center'>
         <label className='mx-10'>
