@@ -90,11 +90,10 @@ export default function Generator() {
             name = name + upperC.charAt(Math.floor(Math.random() * len))
             name = name + lowerC.charAt(Math.floor(Math.random() * len))
 
-            len-=2;
-
+          
             if(checkedItems.checkbox1 && checkedItems.checkbox3){
-                num = len/3;
-                spec = len/3
+                num = Math.ceil(len/3);
+                spec = Math.ceil(len/3)
             }
 
             else{
@@ -103,6 +102,9 @@ export default function Generator() {
                 else if(checkedItems.checkbox3)
                     spec = len/2;
             }
+
+            len-=2;
+
 
             for(let i=0;i<len-num-spec;i++){
                 let ran = Math.ceil(Math.random()*2);
